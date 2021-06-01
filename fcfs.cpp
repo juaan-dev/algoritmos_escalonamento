@@ -1,3 +1,5 @@
+//ALGORITMO FCFS (First-Come, First Served)
+
 #include<iostream>
 #include <locale.h>
 using namespace std;
@@ -29,9 +31,9 @@ void tempo_Medio(int processos[], int n, int exec[], int chegada[])
  
     tempoTurnAround(processos, n, exec, espera, turnaroundtime);
  
-    cout << "Processos " <<  "	Execução " << " 	Chegada "
+    cout << "Processos " <<  "	ExecuÃ§Ã£o " << " 	Chegada "
          << " 	Espera " << " Turn-Around Time "
-         << " Tempo de Finalização \n";
+         << " Tempo de FinalizaÃ§Ã£o \n";
     int total_espera = 0, total_turnaroundtime = 0;
     for (int i = 0 ; i < n ; i++)
     {
@@ -42,11 +44,11 @@ void tempo_Medio(int processos[], int n, int exec[], int chegada[])
              << chegada[i] << "\t\t" << espera[i] << "\t\t "
              << turnaroundtime[i]  <<  "\t\t " << final_tempo << endl;
     }
- 	cout << "\nTempo médio de execução = "
+ 	cout << "\nTempo mÃ©dio de execuÃ§Ã£o = "
          << (float)total_turnaroundtime / (float)n
     	 <<"s"
 		 << "\n";
-    cout << "Tempo médio de espera = "
+    cout << "Tempo mÃ©dio de espera = "
          << (float)total_espera / (float)n
  		<<"s";
 }
