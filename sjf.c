@@ -1,3 +1,5 @@
+// ALGORITMO SJF(Shortest Job First)
+
 #include <stdio.h>
 int main() 
 {
