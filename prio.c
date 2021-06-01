@@ -1,3 +1,5 @@
+//ALGORITMO DE ESCALONAMENTO POR PRIORIDADE
+
 #include<stdio.h>
 #include<conio.h>
 #include<string.h>
@@ -9,12 +11,12 @@ void main()
     int total_espera=0,total_turnaround=0,teste=1;
     float med_espera,med_turn;
     char id_processo[10][10],t[10];
-    printf("Número de Processos:");
+    printf("NÃºmero de Processos:");
     scanf("%d",&N);
     //while(N>0){
     for(i=0; i<N; i++)
     {
-        printf("Número do Processo ,Chegada, Execução e Prioridade:");
+        printf("NÃºmero do Processo ,Chegada, ExecuÃ§Ã£o e Prioridade:");
         scanf("%s%d%d%d",id_processo[i],&X[i],&Y[i],&prioridade[i]);
     }
     for(i=0; i<N; i++)
@@ -60,11 +62,11 @@ void main()
     med_espera=(float)total_espera/N;
     med_turn=(float)total_turnaround/N;
     printf("Teste %d",teste);
-	printf("\nProcesso Chegada\tExecução\tPrioridade\tTempo de Espera\tTurnaround");
+	printf("\nProcesso Chegada\tExecuÃ§Ã£o\tPrioridade\tTempo de Espera\tTurnaround");
     for(i=0; i<N; i++)
         printf("\n%s\t%5d\t\t%5d\t\t%5d\t\t%5d\t\t%5d",id_processo[i],X[i],Y[i],prioridade[i],espera[i],turnaround[i]);
-    printf("\nTempo médio de execução:%.2fs",med_turn);
-    printf("\nTempo médio de espera:%.2fs", med_espera);
+    printf("\nTempo mÃ©dio de execuÃ§Ã£o:%.2fs",med_turn);
+    printf("\nTempo mÃ©dio de espera:%.2fs", med_espera);
     getch();
 	
 	for(i=0;i<38;i++)
